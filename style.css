@@ -11,7 +11,7 @@
     --surface: #132952;
     --surface2: #183260;
     --border: #1E3D70;
-    --accent: #4FFFB0;
+    --accent: #72baf5;
     --accent2: #5B8DEF;
     --text: #E8EAF0;
     --muted: #B0C4DE;
@@ -29,7 +29,7 @@ body {
 }
 
 header {
-    background: var(--surface);
+    background: var(--white);
     border-bottom: 1px solid var(--border);
     padding: 0 36px;
     height: 64px;
@@ -43,14 +43,14 @@ header {
 }
 
 header img {
-    height: 52px;
+    height: 50px;
     width: auto;
 }
 
 header h3 {
     font-family: 'Syne', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 700;
     color: var(--accent);
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -89,7 +89,7 @@ section {
 h1 {
     font-family: 'Syne', sans-serif;
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--white);
     line-height: 1.2;
 }
@@ -291,10 +291,32 @@ ol li::before {
     flex-shrink: 0;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+    counter-reset: passos;
+}
+
+ul li {
+    counter-increment: passos;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    color: var(--text);
+    transition: border-color 0.18s;
+}
+
 img {
     max-width: 100%;
     border-radius: 10px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--white);
     margin: 12px 0 20px;
     display: block;
 }
